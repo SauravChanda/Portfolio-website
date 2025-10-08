@@ -31,7 +31,7 @@ export function PortfolioNavbar() {
   };
 
   return (
-    <Navbar className="fixed inset-x-0 top-0 z-50">
+    <Navbar className="fixed inset-x-0 top-1 md:top-5 z-50">
       {/* Desktop Navigation */}
       <NavBody>
         {/* Logo */}

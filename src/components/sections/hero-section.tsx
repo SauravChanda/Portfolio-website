@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="py-20 sm:py-28 relative h-screen flex items-center justify-center">
+    <section className="py-20 sm:py-28 relative min-h-screen flex items-center justify-center">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}

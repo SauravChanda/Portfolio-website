@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="py-20 sm:py-28 relative">
+    <section className="py-20 sm:py-28 relative h-screen flex items-center justify-center">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
@@ -111,22 +111,22 @@ export function HeroSection() {
                 >
                   {/* Profile image container */}
                   <div className="relative w-full h-full rounded-lg overflow-hidden shadow-2xl backdrop-blur-sm">
-                  <Image
-                    src="/Saurav.png"
-                    alt="Saurav Chanda - Full-stack Developer"
-                    fill
-                    className="object-cover object-center"
-                    priority
-                    sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
-                    style={{
-                      filter: 'drop-shadow(rgba(255, 255, 255, 1) 0px 0px 6px) drop-shadow(rgba(255, 255, 255, 0.8) 0px 0px 40px) '
-                    }}
-                  />
-                  {/* Subtle inner glow to smooth edges */}
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/5 via-transparent to-black/5 pointer-events-none"></div>
-                </div>
+                    <Image
+                      src="/Saurav.png"
+                      alt="Saurav Chanda - Full-stack Developer"
+                      fill
+                      className="object-cover object-center"
+                      priority
+                      sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
+                      style={{
+                        filter: 'drop-shadow(rgba(255, 255, 255, 1) 0px 0px 6px) drop-shadow(rgba(255, 255, 255, 0.8) 0px 0px 40px) '
+                      }}
+                    />
+                    {/* Subtle inner glow to smooth edges */}
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/5 via-transparent to-black/5 pointer-events-none"></div>
+                  </div>
+                </motion.div>
               </motion.div>
-            </motion.div>
             </div>
           </div>
         </div>

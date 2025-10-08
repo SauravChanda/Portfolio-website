@@ -13,7 +13,8 @@ import {
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const navigationItems = [
-  { name: "About", link: "#about" },
+//   { name: "About", link: "#about" },
+  { name: "Experience", link: "#experience" },
   { name: "Stack", link: "#stack" },
   { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },

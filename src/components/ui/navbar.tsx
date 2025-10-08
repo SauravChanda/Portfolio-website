@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./theme-toggle";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 interface NavItem {
   name: string;
@@ -66,19 +67,23 @@ export function Navbar({ navItems }: NavbarProps) {
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center gap-4">
           <ThemeToggle />
-          <motion.button
-            onClick={toggleMenu}
-            className="p-2 rounded-md hover:bg-accent transition-colors"
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            aria-label="Toggle menu"
           >
-            {isOpen ? (
-              <X className="h-5 w-5 text-foreground" />
-            ) : (
-              <Menu className="h-5 w-5 text-foreground" />
-            )}
-          </motion.button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </Button>
+          </motion.div>
         </div>
       </nav>
 

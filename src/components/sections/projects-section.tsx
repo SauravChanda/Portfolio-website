@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ShoppingCart, CheckSquare, BarChart3, Link } from "lucide-react";
 
 export function ProjectsSection() {
@@ -54,18 +54,35 @@ export function ProjectsSection() {
       >
         Featured Projects
       </motion.h2>
-      <BentoGrid className="max-w-4xl mx-auto">
+      <div className="grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
         {projects.map((item, i) => (
-          <BentoGridItem
+          <motion.div
             key={i}
-            title={item.title}
-            description={item.description}
-            header={item.header}
             className={item.className}
-            icon={item.icon}
-          />
+            whileHover={{
+              scale: 1.02,
+              transition: { duration: 0.2 },
+            }}
+          >
+            <Card className="h-full hover:shadow-xl transition duration-200">
+              <CardHeader className="p-4">
+                {item.header}
+              </CardHeader>
+              <CardContent className="p-4 pt-0 flex flex-col justify-between flex-1">
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    {item.icon}
+                    <CardTitle className="text-base">{item.title}</CardTitle>
+                  </div>
+                  <CardDescription className="text-sm">
+                    {item.description}
+                  </CardDescription>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
-      </BentoGrid>
+      </div>
     </section>
   );
 }

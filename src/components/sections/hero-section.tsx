@@ -1,13 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
     <section className="py-20 sm:py-28 relative">
-      <BackgroundBeams className="absolute inset-0 z-0" />
-      <div className="relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <motion.p 
           className="text-sm text-foreground/70"
           initial={{ opacity: 0, y: 20 }}
@@ -38,42 +37,54 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <motion.a
-            href="#projects"
-            className="inline-flex items-center gap-2 rounded-md bg-indigo-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-indigo-500"
+          <motion.div
             whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(99, 102, 241, 0.3)" }}
             whileTap={{ scale: 0.95 }}
           >
-            View Projects
-          </motion.a>
-          <motion.a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-foreground/5"
+            <Button asChild>
+              <a href="#projects">
+                View Projects
+              </a>
+            </Button>
+          </motion.div>
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact Me
-          </motion.a>
-          <motion.a
-            href="https://github.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-foreground/5"
+            <Button variant="outline" asChild>
+              <a href="#contact">
+                Contact Me
+              </a>
+            </Button>
+          </motion.div>
+          <motion.div
             whileHover={{ scale: 1.05, rotate: 2 }}
             whileTap={{ scale: 0.95 }}
           >
-            GitHub
-          </motion.a>
-          <motion.a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-foreground/5"
+            <Button variant="outline" asChild>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </Button>
+          </motion.div>
+          <motion.div
             whileHover={{ scale: 1.05, rotate: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            LinkedIn
-          </motion.a>
+            <Button variant="outline" asChild>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
     </section>

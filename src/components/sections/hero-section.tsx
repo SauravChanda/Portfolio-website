@@ -9,7 +9,7 @@ export function HeroSection() {
       <BackgroundBeams className="absolute inset-0 z-0" />
       <div className="relative z-10">
         <motion.p 
-          className="text-sm text-black/70 dark:text-white/70"
+          className="text-sm text-foreground/70"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -29,7 +29,7 @@ export function HeroSection() {
         <div className="mt-4 max-w-2xl">
           <TextGenerateEffect 
             words="Full‑stack developer crafting fast, accessible products with Next.js, React, Node.js, and PostgreSQL. I focus on clean architecture, DX, and delightful user experiences."
-            className="text-base sm:text-lg text-black/80 dark:text-white/80"
+            className="text-base sm:text-lg text-foreground/80"
           />
         </div>
         <motion.div 
@@ -48,7 +48,7 @@ export function HeroSection() {
           </motion.a>
           <motion.a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-foreground/5"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -58,7 +58,7 @@ export function HeroSection() {
             href="https://github.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-foreground/5"
             whileHover={{ scale: 1.05, rotate: 2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -68,7 +68,7 @@ export function HeroSection() {
             href="https://www.linkedin.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-foreground/5"
             whileHover={{ scale: 1.05, rotate: -2 }}
             whileTap={{ scale: 0.95 }}
           >

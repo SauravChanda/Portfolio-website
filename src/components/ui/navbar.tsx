@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { ThemeToggle } from "./theme-toggle";
 
 interface NavItem {
   name: string;
@@ -23,25 +24,35 @@ export function Navbar({ navItems }: NavbarProps) {
           Saurav Chanda
         </motion.a>
         
-        <ul className="flex items-center gap-8 text-sm font-medium">
-          {navItems.map((item, index) => (
-            <motion.li 
-              key={item.name}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-            >
-              <motion.a 
-                href={item.link}
-                className="text-black/80 dark:text-white/80 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
-                whileHover={{ y: -2 }}
-                whileTap={{ y: 0 }}
+        <div className="flex items-center gap-8">
+          <ul className="flex items-center gap-8 text-sm font-medium">
+            {navItems.map((item, index) => (
+              <motion.li 
+                key={item.name}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
               >
-                {item.name}
-              </motion.a>
-            </motion.li>
-          ))}
-        </ul>
+                <motion.a 
+                  href={item.link}
+                  className="text-black/80 dark:text-white/80 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+                  whileHover={{ y: -2 }}
+                  whileTap={{ y: 0 }}
+                >
+                  {item.name}
+                </motion.a>
+              </motion.li>
+            ))}
+          </ul>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
+          >
+            <ThemeToggle />
+          </motion.div>
+        </div>
       </nav>
     </header>
   );

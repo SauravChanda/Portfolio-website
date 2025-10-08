@@ -1,5 +1,5 @@
 "use client";
-import { FloatingNav } from "@/components/ui/floating-navbar";
+import { Navbar } from "@/components/ui/navbar";
 import { HeroSection } from "@/components/sections/hero-section";
 import { AboutSection } from "@/components/sections/about-section";
 import { TechStackSection } from "@/components/sections/tech-stack-section";
@@ -16,8 +16,8 @@ const navItems = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground relative">
-      <FloatingNav navItems={navItems} />
+    <div className="min-h-screen bg-background text-foreground">
+      <Navbar navItems={navItems} />
 
       <main id="home" className="mx-auto max-w-5xl px-6">
         <HeroSection />

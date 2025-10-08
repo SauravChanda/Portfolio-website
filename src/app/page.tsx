@@ -1,5 +1,5 @@
 "use client";
-import { Navbar } from "@/components/ui/navbar";
+import { PortfolioNavbar } from "@/components/sections/portfolio-navbar";
 import { HeroSection } from "@/components/sections/hero-section";
 import { AboutSection } from "@/components/sections/about-section";
 import { TechStackSection } from "@/components/sections/tech-stack-section";
@@ -7,13 +7,6 @@ import { ProjectsSection } from "@/components/sections/projects-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { Footer } from "@/components/sections/footer";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-
-const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Stack", link: "#skills" },
-  { name: "Projects", link: "#projects" },
-  { name: "Contact", link: "#contact" },
-];
 
 export default function Home() {
   return (
@@ -25,7 +18,7 @@ export default function Home() {
       
       {/* Content overlay */}
       <div className="relative z-10">
-        <Navbar navItems={navItems} />
+        <PortfolioNavbar />
 
         <main id="home" className="mx-auto max-w-5xl px-6">
           <HeroSection />

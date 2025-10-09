@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { ShoppingCart, CheckSquare, BarChart3, Link } from "lucide-react";
 
 export function ProjectsSection() {
@@ -11,7 +11,6 @@ export function ProjectsSection() {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500"></div>
       ),
-      className: "md:col-span-2",
       icon: <ShoppingCart className="h-6 w-6 text-violet-500" />
     },
     {
@@ -20,7 +19,6 @@ export function ProjectsSection() {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500"></div>
       ),
-      className: "md:col-span-1",
       icon: <CheckSquare className="h-6 w-6 text-emerald-500" />
     },
     {
@@ -29,7 +27,6 @@ export function ProjectsSection() {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-orange-500 via-red-500 to-pink-500"></div>
       ),
-      className: "md:col-span-1",
       icon: <BarChart3 className="h-6 w-6 text-orange-500" />
     },
     {
@@ -38,7 +35,6 @@ export function ProjectsSection() {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500"></div>
       ),
-      className: "md:col-span-2",
       icon: <Link className="h-6 w-6 text-indigo-500" />
     },
   ];
@@ -54,32 +50,41 @@ export function ProjectsSection() {
       >
         Featured Projects
       </motion.h2>
-      <div className="grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {projects.map((item, i) => (
           <motion.div
             key={i}
-            className={item.className}
-            whileHover={{
-              scale: 1.02,
-              transition: { duration: 0.2 },
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: i * 0.1
             }}
+            viewport={{ once: true }}
           >
-            <Card className="h-full hover:shadow-xl transition duration-200">
-              <CardHeader className="p-4">
-                {item.header}
-              </CardHeader>
-              <CardContent className="p-4 pt-0 flex flex-col justify-between flex-1">
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    {item.icon}
-                    <CardTitle className="text-base">{item.title}</CardTitle>
-                  </div>
-                  <CardDescription className="text-sm">
-                    {item.description}
-                  </CardDescription>
-                </div>
-              </CardContent>
-            </Card>
+            <CardContainer className="inter-var">
+              <CardBody className="bg-card relative group/card dark:hover:shadow-2xl dark:hover:shadow-primary/[0.1] border border-border w-full h-full rounded-xl p-6 hover:border-primary/50 transition-all duration-300">
+                <CardItem
+                  translateZ="50"
+                  className="w-full h-48 mb-4"
+                >
+                  {item.header}
+                </CardItem>
+                <CardItem
+                  translateZ="60"
+                  className="flex items-center gap-2 mb-3"
+                >
+                  {item.icon}
+                  <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+                </CardItem>
+                <CardItem
+                  translateZ="40"
+                  className="text-sm text-muted-foreground leading-relaxed"
+                >
+                  {item.description}
+                </CardItem>
+              </CardBody>
+            </CardContainer>
           </motion.div>
         ))}
       </div>

@@ -15,79 +15,62 @@ export interface ExperienceData {
 
 export const experienceData: ExperienceData[] = [
   {
-    title: "2024",
+    title: "2021 - Present",
     content: {
-      year: "2024",
-      position: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
+      year: "2021 - Present",
+      position: "Technical Lead",
+      company: "Ymir",
       achievements: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-        "Mentored 5 junior developers and conducted code reviews",
-        "Optimized database queries improving application performance by 40%",
+        "Designed and developed Specc, a no-code API integration platform using React and PHP",
+        "Reduced server costs by 75% by migrating DrDropin from AWS EC2 to GCP Cloud Run",
+        "Built React and Vue-based healthcare applications with Laravel backend",
+        "Implemented Google Gemini AI to accelerate user interactions and provide intelligent API suggestions",
+        "Set up CI/CD pipelines with GitHub Actions improving deployment reliability",
+        "Developed modular Patient and Doctor Dashboards for improved scalability"
       ],
-      technologies: "React, Node.js, TypeScript, AWS, Docker, PostgreSQL",
+      technologies: "React, Vue.js, PHP, Laravel, Docker, GCP, AWS, Google Gemini AI, GitHub Actions",
       additionalInfo: {
-        label: "Team Size",
-        value: "12 developers",
+        label: "Key Projects",
+        value: "Specc Platform, DrDropin Healthcare",
       },
     },
   },
   {
-    title: "2023",
+    title: "2019 - 2021",
     content: {
-      year: "2023",
-      position: "Full Stack Developer",
-      company: "InnovateLab",
+      year: "2019 - 2021",
+      position: "Software Developer",
+      company: "Ati Motors",
       achievements: [
-        "Built responsive web applications using modern frameworks",
-        "Integrated third-party APIs and payment gateways",
-        "Collaborated with UX/UI designers to implement pixel-perfect designs",
-        "Participated in agile development processes and sprint planning",
+        "Built a trip booking system for autonomous vehicles using React and Express",
+        "Developed a vector-based map editor using React and HTML Canvas",
+        "Enabled seamless scheduling and improved user experience for autonomous vehicle operations",
+        "Collaborated with hardware teams to integrate software solutions with autonomous vehicle systems"
       ],
-      technologies: "Next.js, Python, FastAPI, MongoDB, Tailwind CSS",
+      technologies: "React, Express.js, Node.js, HTML Canvas, JavaScript",
       additionalInfo: {
-        label: "Projects",
-        value: "8 completed",
+        label: "Focus Area",
+        value: "Autonomous Vehicle Software",
       },
     },
   },
   {
-    title: "2022",
+    title: "2015 - 2019",
     content: {
-      year: "2022",
-      position: "Frontend Developer",
-      company: "StartupXYZ",
+      year: "2015 - 2019",
+      position: "Bachelor of Technology",
+      company: "Assam University",
       achievements: [
-        "Developed user-friendly interfaces for web and mobile applications",
-        "Implemented state management solutions for complex applications",
-        "Optimized application performance and loading times",
-        "Worked closely with backend developers to integrate APIs",
+        "Computer Science and Engineering degree",
+        "Located in Silchar, Assam, India",
+        "Built foundation in software development and computer science principles",
+        "Participated in various technical projects and coding competitions"
       ],
-      technologies: "Vue.js, JavaScript, Sass, Firebase, Figma",
+      technologies: "C, C++, Java, Data Structures, Algorithms, Database Systems",
       additionalInfo: {
-        label: "Users Impacted",
-        value: "50K+ monthly",
+        label: "Degree",
+        value: "B.Tech CSE",
       },
     },
-  },
-  {
-    title: "2021",
-    content: {
-      year: "2021",
-      position: "Junior Developer",
-      company: "WebDev Agency",
-      achievements: [
-        "Assisted in developing client websites and web applications",
-        "Learned modern development practices and version control",
-        "Contributed to bug fixes and feature implementations",
-        "Participated in client meetings and requirement gathering",
-      ],
-      technologies: "HTML, CSS, JavaScript, PHP, MySQL, WordPress",
-      additionalInfo: {
-        label: "Clients Served",
-        value: "25+ businesses",
-      },
-    },
-  },
+  }
 ];

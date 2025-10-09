@@ -2,34 +2,53 @@
 import { motion } from 'framer-motion'
 import {
   SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiPython,
-  SiPostgresql,
-  SiMongodb,
-  SiDocker,
-  SiGit,
+  SiVuedotjs,
+  SiJavascript,
   SiHtml5,
   SiCss3,
-  SiJavascript,
-  SiSass,
-  SiGithub,
-  SiFirebase,
+  SiNodedotjs,
+  SiExpress,
+  SiDjango,
+  SiFlask,
+  SiFastapi,
+  SiLaravel,
+  SiMysql,
+  SiPostgresql,
+  SiAmazon,
+  SiGooglecloud,
+  SiDocker,
+  SiGithubactions,
+  SiPhp,
+  SiPython,
 } from 'react-icons/si'
 
 const techStackData = [
+  // Frontend
+  { skill: 'React', icon: SiReact, color: '#61DAFB' },
+  { skill: 'Vue.js', icon: SiVuedotjs, color: '#4FC08D' },
+  { skill: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
   { skill: 'HTML', icon: SiHtml5, color: '#E34F26' },
   { skill: 'CSS', icon: SiCss3, color: '#1572B6' },
-  { skill: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
-  { skill: 'SASS', icon: SiSass, color: '#CC6699' },
-  { skill: 'React JS', icon: SiReact, color: '#61DAFB' },
-  { skill: 'GitHub', icon: SiGithub, color: '#181717' },
+  
+  // Backend
   { skill: 'Node.js', icon: SiNodedotjs, color: '#339933' },
-  { skill: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
-  { skill: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  { skill: 'Express', icon: SiExpress, color: '#000000' },
+  { skill: 'Django', icon: SiDjango, color: '#092E20' },
+  { skill: 'Flask', icon: SiFlask, color: '#000000' },
+  { skill: 'FastAPI', icon: SiFastapi, color: '#009688' },
+  { skill: 'Laravel', icon: SiLaravel, color: '#FF2D20' },
+  { skill: 'PHP', icon: SiPhp, color: '#777BB4' },
+  { skill: 'Python', icon: SiPython, color: '#3776AB' },
+  
+  // Databases
+  { skill: 'MySQL', icon: SiMysql, color: '#4479A1' },
+  { skill: 'PostgreSQL', icon: SiPostgresql, color: '#336791' },
+  
+  // Cloud & DevOps
+  { skill: 'AWS', icon: SiAmazon, color: '#FF9900' },
+  { skill: 'GCP', icon: SiGooglecloud, color: '#4285F4' },
   { skill: 'Docker', icon: SiDocker, color: '#2496ED' },
+  { skill: 'GitHub Actions', icon: SiGithubactions, color: '#2088FF' },
 ]
 
 // Duplicate the array for seamless infinite scroll

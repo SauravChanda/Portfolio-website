@@ -34,7 +34,7 @@ export function HeroSection() {
             </motion.h1>
             <div className="mt-4 max-w-2xl">
               <TextGenerateEffect
-                words="Full‑stack developer crafting fast, accessible products with Next.js, React, Node.js, and PostgreSQL. I focus on clean architecture, DX, and delightful user experiences."
+                words="Full-stack developer specializing in scalable web apps, cloud platforms, and DevOps."
                 className="text-base sm:text-lg text-foreground/80"
               />
             </div>
@@ -70,7 +70,7 @@ export function HeroSection() {
               >
                 <Button variant="outline" asChild>
                   <a
-                    href="https://github.com/"
+                    href="https://github.com/sauravchanda"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -84,7 +84,7 @@ export function HeroSection() {
               >
                 <Button variant="outline" asChild>
                   <a
-                    href="https://www.linkedin.com/"
+                    href="https://www.linkedin.com/in/sauravchanda"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

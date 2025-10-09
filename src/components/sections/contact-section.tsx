@@ -38,7 +38,7 @@ export function ContactSection() {
           viewport={{ once: true }}
         >
           <motion.a
-            href="mailto:hello@sauravchanda.dev"
+            href="mailto:sauravchanda9@gmail.com"
             className="inline-flex items-center gap-2 rounded-md bg-indigo-600 text-white px-6 py-3 text-sm font-medium shadow hover:bg-indigo-500"
             whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(99, 102, 241, 0.3)" }}
             whileTap={{ scale: 0.95 }}
@@ -47,15 +47,13 @@ export function ContactSection() {
             Send Email
           </motion.a>
           <motion.a
-            href="https://calendly.com/sauravchanda"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+918876288483"
             className="inline-flex items-center gap-2 rounded-md border px-6 py-3 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span>📅</span>
-            Schedule Call
+            <span>📞</span>
+            Call Me
           </motion.a>
         </motion.div>
       </motion.div>

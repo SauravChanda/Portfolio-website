@@ -25,9 +25,10 @@ export function ExperienceItem({
         {achievements.map((achievement, index) => (
           <div
             key={index}
-            className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm font-bold"
+            className="flex gap-2 items-start text-neutral-700 dark:text-neutral-300 text-xs md:text-sm font-bold mb-2"
           >
-            {achievement}
+            <span className="text-neutral-500 dark:text-neutral-400 mt-1 text-xs">•</span>
+            <span>{achievement}</span>
           </div>
         ))}
       </div>

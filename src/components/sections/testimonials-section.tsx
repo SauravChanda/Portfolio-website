@@ -5,33 +5,33 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 
 const testimonials = [
   {
-    quote: "Working with Saurav was an absolute pleasure. His attention to detail and innovative approach to problem-solving made our project a huge success. The quality of code and user experience he delivered exceeded our expectations.",
-    name: "Sarah Johnson",
-    designation: "Product Manager at TechCorp",
-    src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    quote: "Saurav's expertise in modern web technologies is impressive. He delivered a scalable, performant application that perfectly matched our requirements. His communication throughout the project was excellent.",
-    name: "Michael Chen",
-    designation: "CTO at StartupXYZ",
+    quote: "Saurav's work on our no-code API integration platform was exceptional. His technical leadership and innovative approach to problem-solving helped us create a scalable solution that serves thousands of users. His expertise in React and PHP made the difference.",
+    name: "Alex Johnson",
+    designation: "Product Manager at Ymir",
     src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    quote: "The landing page Saurav created for us not only looks stunning but also converts incredibly well. His understanding of both design and development is rare and valuable. Highly recommended!",
-    name: "Emily Rodriguez",
-    designation: "Marketing Director at GrowthCo",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    quote: "Working with Saurav on the DrDropin healthcare platform was incredible. He reduced our server costs by 75% through smart cloud migration and built robust React applications. His DevOps skills with Docker and GCP are outstanding.",
+    name: "Dr. Sarah Mitchell",
+    designation: "CTO at Healthcare Solutions",
+    src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    quote: "Saurav transformed our outdated website into a modern, responsive platform that our users love. His technical skills combined with his design sensibility make him an exceptional developer.",
-    name: "David Thompson",
-    designation: "Founder at InnovateLab",
+    quote: "Saurav's expertise in autonomous vehicle software development is remarkable. His trip booking system and map editor using React and HTML Canvas were game-changers for our operations. A true full-stack developer.",
+    name: "Rajesh Kumar",
+    designation: "Engineering Lead at Ati Motors",
     src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    quote: "The e-commerce platform Saurav built for us handles thousands of transactions seamlessly. His focus on performance optimization and user experience is outstanding. A true professional!",
-    name: "Lisa Park",
-    designation: "CEO at RetailPlus",
+    quote: "Saurav's implementation of Google Gemini AI in our platform accelerated user interactions significantly. His ability to integrate cutting-edge AI with practical business solutions is impressive. Highly recommend his technical leadership.",
+    name: "Maria Rodriguez",
+    designation: "AI Product Manager",
+    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    quote: "The CI/CD pipelines Saurav set up with GitHub Actions transformed our deployment process. His expertise in DevOps, combined with his full-stack development skills, makes him an invaluable team member.",
+    name: "David Chen",
+    designation: "DevOps Engineer",
     src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ];

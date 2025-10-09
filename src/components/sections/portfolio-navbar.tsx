@@ -13,10 +13,10 @@ import {
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const navigationItems = [
-//   { name: "About", link: "#about" },
+  { name: "Testimonials", link: "#testimonials" },
   { name: "Experience", link: "#experience" },
   { name: "Stack", link: "#stack" },
-  { name: "Projects", link: "#projects" },
+//   { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -35,6 +35,10 @@ export function PortfolioNavbar() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleNavItemClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <Navbar className="fixed inset-x-0 top-1 md:top-5 z-50">
       {/* Desktop Navigation */}
@@ -50,17 +54,17 @@ export function PortfolioNavbar() {
         </div>
 
         {/* Navigation Items */}
-        <NavItems items={navigationItems} />
+        <NavItems items={navigationItems} onItemClick={handleNavItemClick} />
 
         {/* Right side actions */}
         <div className="flex items-center space-x-4">
           <ThemeToggle />
-          <a
+          {/* <a
             href="#contact"
-            className="hidden lg:inline-block px-4 py-2 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-medium rounded-md hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors"
+            className="hidden lg:inline-block px-4 py-2 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-medium rounded-md hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors cursor-pointer"
           >
             Get in Touch
-          </a>
+          </a> */}
         </div>
       </NavBody>
 
@@ -69,8 +73,8 @@ export function PortfolioNavbar() {
         <MobileNavHeader>
           {/* Mobile Logo */}
           <div className="flex items-center space-x-2 cursor-pointer" onClick={handleLogoClick}>
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold text-sm">
-              S
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold text-sm overflow-hidden">
+              <img src="/Logo.png" alt="Saurav Chanda" width={32} height={32} />
             </div>
             <span className="font-semibold text-neutral-900 dark:text-neutral-100">
               Saurav Chanda

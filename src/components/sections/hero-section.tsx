@@ -65,20 +65,6 @@ export function HeroSection() {
                 </ScrollToSection>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05, rotate: 2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button variant="outline" asChild>
-                  <a
-                    href="https://github.com/SauravChanda"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </Button>
-              </motion.div>
-              <motion.div
                 whileHover={{ scale: 1.05, rotate: -2 }}
                 whileTap={{ scale: 0.95 }}
               >

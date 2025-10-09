@@ -1,171 +1,102 @@
 "use client";
-import { motion } from "framer-motion";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from '@/components/ui/card'
+import { motion } from 'framer-motion'
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiPython,
+  SiPostgresql,
+  SiMongodb,
+  SiDocker,
+  SiGit,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiSass,
+  SiGithub,
+  SiFirebase,
+} from 'react-icons/si'
 
+const techStackData = [
+  { skill: 'HTML', icon: SiHtml5, color: '#E34F26' },
+  { skill: 'CSS', icon: SiCss3, color: '#1572B6' },
+  { skill: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
+  { skill: 'SASS', icon: SiSass, color: '#CC6699' },
+  { skill: 'React JS', icon: SiReact, color: '#61DAFB' },
+  { skill: 'GitHub', icon: SiGithub, color: '#181717' },
+  { skill: 'Node.js', icon: SiNodedotjs, color: '#339933' },
+  { skill: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
+  { skill: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  { skill: 'Docker', icon: SiDocker, color: '#2496ED' },
+]
 
-export function TechStackSection() {
-  const techStack = [
-    { 
-      name: "TypeScript", 
-      category: "Language",
-      description: "Strongly typed JavaScript",
-      icon: "TS"
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
     },
-    { 
-      name: "React", 
-      category: "Frontend",
-      description: "UI component library",
-      icon: "⚛️"
-    },
-    { 
-      name: "Next.js", 
-      category: "Framework",
-      description: "Full-stack React framework",
-      icon: "▲"
-    },
-    { 
-      name: "Node.js", 
-      category: "Runtime",
-      description: "JavaScript runtime environment",
-      icon: "🟢"
-    },
-    { 
-      name: "Express", 
-      category: "Backend",
-      description: "Web application framework",
-      icon: "🚀"
-    },
-    { 
-      name: "PostgreSQL", 
-      category: "Database",
-      description: "Relational database system",
-      icon: "🐘"
-    },
-    { 
-      name: "Prisma", 
-      category: "ORM",
-      description: "Database toolkit & ORM",
-      icon: "🔷"
-    },
-    { 
-      name: "TailwindCSS", 
-      category: "Styling",
-      description: "Utility-first CSS framework",
-      icon: "🎨"
-    },
-    { 
-      name: "Docker", 
-      category: "DevOps",
-      description: "Containerization platform",
-      icon: "🐳"
-    },
-    { 
-      name: "AWS", 
-      category: "Cloud",
-      description: "Cloud computing services",
-      icon: "☁️"
-    },
-  ];
+  },
+}
 
-  // Additional technologies not featured in main cards
-  const otherTechnologies = [
-    "MongoDB", "Redis", "GraphQL", "Jest", "Cypress", "Webpack", 
-    "Vite", "ESLint", "Prettier", "Git", "GitHub Actions", "Vercel",
-    "Figma", "Postman", "VS Code", "Linux", "Nginx", "Socket.io"
-  ];
+const itemVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: 'spring' as const,
+      stiffness: 100,
+      damping: 10,
+    },
+  },
+}
 
+export default function TechStackSection() {
   return (
-    <section id="skills" className="py-16 sm:py-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent mb-4">
-              Technical Expertise
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive overview of the technologies and tools I leverage to build scalable, modern applications
-            </p>
-          </motion.div>
-        </div>
+    <section className="py-20 bg-background relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
 
-        {/* Tech Stack Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 auto-rows-fr"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto"
         >
-          {techStack.map((tech, index) => {
-            const IconComponent = tech.icon;
+          {techStackData.map((tech, index) => {
+            const IconComponent = tech.icon
             return (
               <motion.div
-                key={tech.name}
-                className="group relative"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: index * 0.1
+                key={tech.skill}
+                variants={itemVariants}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  transition: { type: 'spring', stiffness: 300, damping: 20 }
                 }}
-                whileHover={{ y: -5 }}
-                viewport={{ once: true }}
+                className="group"
               >
-                <GlassCard className="p-4 hover:shadow-lg transition-all duration-300 h-full flex flex-col min-h-[50px] items-baseline">
-                  <div className="flex items-start gap-3 flex-1">
-                    <div className="bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg p-2.5 group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300 shadow-sm flex-shrink-0">
-                      <span className="text-lg text-primary">{tech.icon}</span>
-                    </div>
-                    <div className="flex-1 min-w-0 flex flex-col h-full">
-                      <div className="flex items-center justify-between mb-1.5">
-                        <h3 className="font-semibold text-base text-foreground group-hover:text-primary transition-colors duration-300 truncate">{tech.name}</h3>
-                        <span className="text-xs font-medium text-muted-foreground bg-muted/80 px-2 py-0.5 rounded-full border border-border/50 group-hover:bg-primary/10 group-hover:text-primary group-hover:border-primary/20 transition-all duration-300 ml-2 shrink-0">
-                          {tech.category}
-                        </span>
-                      </div>
-                      <div className="flex-1 flex items-start">
-                        <p className="text-xs text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
-                          {tech.description}
-                        </p>
-                      </div>
-                    </div>
+                <Card className="p-6 h-32 flex flex-col items-center justify-center bg-white/10 dark:bg-white/5 backdrop-blur-md border border-white/20 dark:border-white/10 hover:border-white/30 dark:hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-black/10 dark:hover:shadow-white/5 hover:bg-white/15 dark:hover:bg-white/10">
+                  <div className="mb-3 transition-transform duration-300 group-hover:scale-110">
+                    <IconComponent 
+                      className="w-8 h-8 transition-colors duration-300 drop-shadow-sm" 
+                      style={{ color: tech.color }}
+                    />
                   </div>
-                  
-                </GlassCard>
+                  <span className="text-sm font-medium text-center text-foreground/90 group-hover:text-foreground transition-colors duration-300 drop-shadow-sm">
+                    {tech.skill}
+                  </span>
+                </Card>
               </motion.div>
-            );
+            )
           })}
-        </motion.div>
-
-        {/* Other Technologies */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-lg font-medium text-foreground mb-6">Other Technologies & Tools</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {otherTechnologies.map((tech, index) => (
-              <motion.span
-                key={tech}
-                className="px-4 py-2 rounded-full text-sm font-medium bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-all duration-300"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
-                {tech}
-              </motion.span>
-            ))}
-          </div>
         </motion.div>
       </div>
     </section>

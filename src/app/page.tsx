@@ -11,7 +11,7 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground relative">
+    <div className="min-h-screen bg-background text-foreground relative scroll-smooth">
       {/* Full-screen background gradient */}
       <div className="fixed inset-0 z-0">
         <BackgroundGradientAnimation />
@@ -21,14 +21,20 @@ export default function Home() {
       <div className="relative z-10">
         <PortfolioNavbar />
 
-        <main id="home" className="mx-auto max-w-5xl px-6">
-          <HeroSection />
-          {/* <AboutSection /> */}
-          <ExperienceSection />
-          <TechStackSection />
-          <ProjectsSection />
-          <ContactSection />
-        </main>
+        <section id="home" className="min-h-screen flex items-center justify-center">
+          <div className="mx-auto max-w-5xl px-6 w-full">
+            <HeroSection />
+          </div>
+        </section>
+
+        <section>
+          <div className="mx-auto max-w-5xl px-6">
+            <TechStackSection />
+            <ExperienceSection />
+            <ProjectsSection />
+            <ContactSection />
+          </div>
+        </section>
 
         <Footer />
       </div>

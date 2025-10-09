@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Button } from "@/components/ui/button";
+import { ScrollToSection } from "@/components/ui/scroll-to-section";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 export function HeroSection() {
@@ -45,21 +47,21 @@ export function HeroSection() {
                 whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(99, 102, 241, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button asChild>
-                  <a href="#projects">
+                <ScrollToSection targetId="projects">
+                  <Button>
                     View Projects
-                  </a>
-                </Button>
+                  </Button>
+                </ScrollToSection>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button variant="outline" asChild>
-                  <a href="#contact">
+                <ScrollToSection targetId="contact">
+                  <Button variant="outline">
                     Contact Me
-                  </a>
-                </Button>
+                  </Button>
+                </ScrollToSection>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05, rotate: 2 }}
@@ -130,6 +132,27 @@ export function HeroSection() {
             </div>
           </div>
         </div>
+        
+        {/* Scroll indicator */}
+        <motion.div 
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.2 }}
+        >
+          <ScrollToSection 
+            targetId="skills" 
+            className="flex flex-col items-center text-foreground/60 hover:text-foreground transition-colors group"
+          >
+            <span className="text-sm mb-2">Scroll to explore</span>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <ChevronDown className="w-6 h-6 group-hover:scale-110 transition-transform" />
+            </motion.div>
+          </ScrollToSection>
+        </motion.div>
       </div>
     </section>
   );

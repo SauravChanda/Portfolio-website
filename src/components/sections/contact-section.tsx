@@ -37,7 +37,7 @@ export function ContactSection() {
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Let's Work Together
+              Let&apos;s Work Together
             </motion.h2>
             
             <motion.p 
@@ -47,7 +47,7 @@ export function ContactSection() {
               transition={{ delay: 0.4, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Got a project that needs some <em>connection</em>? Let's network and create something awesome together! 🌐✨
+              Got a project that needs some <em>connection</em>? Let&apos;s network and create something awesome together! 🌐✨
             </motion.p>
           </motion.div>
           

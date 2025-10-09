@@ -49,13 +49,13 @@ export default function TestimonialsSection() {
           className="text-center mb-16"
         >
           <motion.p 
-            className="text-lg text-muted-foreground mb-2"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
+            className="text-lg text-muted-foreground mb-8 text-center max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            💬 Don't just take my word for it...
+            💬 Don&apos;t just take my word for it...
           </motion.p>
           
           <motion.h2 
@@ -75,7 +75,7 @@ export default function TestimonialsSection() {
             transition={{ delay: 0.4, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Here's some <em>testimonial</em> evidence that I don't just talk the talk - I walk the walk (and code the code)! 🚶‍♂️💻
+            Here&apos;s some <em>testimonial</em> evidence that I don&apos;t just talk the talk - I walk the walk (and code the code)! 🚶‍♂️💻
           </motion.p>
         </motion.div>
         

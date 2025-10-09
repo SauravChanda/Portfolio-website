@@ -20,7 +20,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              👋 Hey there! I'm
+              👋 Hey there! I&apos;m
             </motion.p>
             <motion.h1
               className="mt-2 text-4xl sm:text-5xl md:text-6xl font-bold"
@@ -44,7 +44,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Let's build something amazing together! 🚀
+              Let&apos;s build something amazing together! 🚀
             </motion.p>
             <motion.div
               className="mt-8 flex flex-wrap items-center gap-3"

@@ -57,7 +57,7 @@ export function ProjectsSection() {
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            🚀 Ready to see what I've been building?
+            🚀 Ready to see what I&apos;ve been building?
           </motion.p>
           
           <motion.h2 
@@ -77,7 +77,7 @@ export function ProjectsSection() {
             transition={{ delay: 0.4, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Here's my <em>portfolio</em> of digital masterpieces - each one crafted with love, caffeine, and probably too many Stack Overflow visits! ☕💻
+            Here&apos;s my <em>portfolio</em> of digital masterpieces - each one crafted with love, caffeine, and probably too many Stack Overflow visits! ☕💻
           </motion.p>
         </motion.div>
         

@@ -37,7 +37,7 @@ export function ExperienceSection() {
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            🎯 Let's talk about my journey...
+            🎯 Let&apos;s talk about my journey...
           </motion.p>
           
           <motion.h2 
@@ -57,7 +57,7 @@ export function ExperienceSection() {
             transition={{ delay: 0.4, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            From code newbie to seasoned developer - here's how I've been <em>debugging</em> my way through life! 🐛✨
+            From code newbie to seasoned developer - here&apos;s how I&apos;ve been <em>debugging</em> my way through life! 🐛✨
           </motion.p>
         </motion.div>
       </div>

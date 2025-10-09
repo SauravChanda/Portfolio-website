@@ -41,14 +41,14 @@ export const BackgroundGradientAnimation = ({
   const isDark = resolvedTheme === "dark";
   
   // Default colors based on theme
-  const defaultGradientStart = isDark ? "rgb(15, 0, 30)" : "rgb(245, 247, 250)";
-  const defaultGradientEnd = isDark ? "rgb(0, 5, 20)" : "rgb(240, 245, 251)";
-  const defaultFirstColor = isDark ? "60, 60, 180" : "203, 213, 225";
-  const defaultSecondColor = isDark ? "120, 50, 180" : "219, 234, 254";
+  const defaultGradientStart = isDark ? "rgb(30, 0, 15)" : "rgb(245, 247, 250)";
+  const defaultGradientEnd = isDark ? "rgb(20, 5, 0)" : "rgb(240, 245, 251)";
+  const defaultFirstColor = isDark ? "180, 60, 60" : "203, 213, 225";
+  const defaultSecondColor = isDark ? "180, 50, 120" : "254, 219, 234";
   const defaultThirdColor = isDark ? "180, 40, 100" : "254, 240, 138";
-  const defaultFourthColor = isDark ? "40, 80, 180" : "191, 219, 254";
+  const defaultFourthColor = isDark ? "180, 80, 40" : "254, 191, 219";
   const defaultFifthColor = isDark ? "20, 120, 60" : "220, 252, 231";
-  const defaultPointerColor = isDark ? "80, 50, 150" : "196, 181, 253";
+  const defaultPointerColor = isDark ? "150, 50, 80" : "253, 196, 181";
 
   // Use provided colors or theme defaults
   const finalGradientStart = gradientBackgroundStart || defaultGradientStart;

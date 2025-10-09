@@ -95,7 +95,7 @@ export function TechStackSection() {
 
         {/* Tech Stack Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 auto-rows-fr"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -116,21 +116,26 @@ export function TechStackSection() {
                 whileHover={{ y: -5 }}
                 viewport={{ once: true }}
               >
-                <GlassCard className="p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-start gap-4 mb-3">
-                    <div className="bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors min-w-8 min-h-8 flex items-center justify-center">
-                      <span className="text-primary">{tech.icon}</span>
+                <GlassCard className="p-4 hover:shadow-lg transition-all duration-300 h-full flex flex-col min-h-[50px] items-baseline">
+                  <div className="flex items-start gap-3 flex-1">
+                    <div className="bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg p-2.5 group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300 shadow-sm flex-shrink-0">
+                      <span className="text-lg text-primary">{tech.icon}</span>
                     </div>
-                    <div className="flex w-full justify-between">
-                      <h3 className="font-semibold text-foreground">{tech.name}</h3>
-                      <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
-                        {tech.category}
-                      </span>
+                    <div className="flex-1 min-w-0 flex flex-col h-full">
+                      <div className="flex items-center justify-between mb-1.5">
+                        <h3 className="font-semibold text-base text-foreground group-hover:text-primary transition-colors duration-300 truncate">{tech.name}</h3>
+                        <span className="text-xs font-medium text-muted-foreground bg-muted/80 px-2 py-0.5 rounded-full border border-border/50 group-hover:bg-primary/10 group-hover:text-primary group-hover:border-primary/20 transition-all duration-300 ml-2 shrink-0">
+                          {tech.category}
+                        </span>
+                      </div>
+                      <div className="flex-1 flex items-start">
+                        <p className="text-xs text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                          {tech.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {tech.description}
-                  </p>
+                  
                 </GlassCard>
               </motion.div>
             );

@@ -10,6 +10,7 @@ type Testimonial = {
   name: string;
   designation: string;
   src: string;
+  linkedinUrl?: string;
 };
 export const AnimatedTestimonials = ({
   testimonials,
@@ -143,8 +144,20 @@ export const AnimatedTestimonials = ({
                 </motion.span>
               ))}
             </motion.p>
+            {testimonials[active].linkedinUrl && (
+              <div className="mt-4">
+                <a
+                  href={testimonials[active].linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  View full testimonial on LinkedIn →
+                </a>
+              </div>
+            )}
           </motion.div>
-          <div className="flex gap-4 pt-12 md:pt-0">
+          <div className="flex gap-4 mt-4">
             <button
               onClick={handlePrev}
               className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"

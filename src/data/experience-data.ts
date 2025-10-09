@@ -15,42 +15,96 @@ export interface ExperienceData {
 
 export const experienceData: ExperienceData[] = [
   {
-    title: "2021 - Present",
+    title: "2024 - Present",
     content: {
-      year: "2021 - Present",
+      year: "2024 - Present",
       position: "Technical Lead",
-      company: "Ymir",
+      company: "Ymir - Tidli Project",
       achievements: [
-        "Designed and developed Specc, a no-code API integration platform using React and PHP",
-        "Reduced server costs by 75% by migrating DrDropin from AWS EC2 to GCP Cloud Run",
-        "Built React and Vue-based healthcare applications with Laravel backend",
-        "Implemented Google Gemini AI to accelerate user interactions and provide intelligent API suggestions",
-        "Set up CI/CD pipelines with GitHub Actions improving deployment reliability",
-        "Developed modular Patient and Doctor Dashboards for improved scalability"
+        "Developing modern web app with React & NestJS",
+        "Building scalable architecture & API endpoints",
+        "Optimizing performance & user experience"
       ],
-      technologies: "React, Vue.js, PHP, Laravel, Docker, GCP, AWS, Google Gemini AI, GitHub Actions",
+      technologies: "React, NestJS, TypeScript, Node.js, PostgreSQL, Docker",
       additionalInfo: {
-        label: "Key Projects",
-        value: "Specc Platform, DrDropin Healthcare",
+        label: "Project Focus",
+        value: "Modern Web Application Development",
       },
     },
   },
   {
-    title: "2019 - 2021",
+    title: "2023 - 2024",
     content: {
-      year: "2019 - 2021",
-      position: "Software Developer",
-      company: "Ati Motors",
+      year: "2023 - 2024",
+      position: "Technical Lead",
+      company: "Ymir - Specc Platform",
       achievements: [
-        "Built a trip booking system for autonomous vehicles using React and Express",
-        "Developed a vector-based map editor using React and HTML Canvas",
-        "Enabled seamless scheduling and improved user experience for autonomous vehicle operations",
-        "Collaborated with hardware teams to integrate software solutions with autonomous vehicle systems"
+        "Built no-code API integration platform with React & Laravel",
+        "Created drag-and-drop interface for API integrations",
+        "Integrated Google Gemini AI for intelligent suggestions",
+        "Enabled non-technical users to build complex integrations"
       ],
-      technologies: "React, Express.js, Node.js, HTML Canvas, JavaScript",
+      technologies: "React, Laravel, PHP, Google Gemini AI, MySQL, Docker, GitHub Actions",
       additionalInfo: {
-        label: "Focus Area",
-        value: "Autonomous Vehicle Software",
+        label: "Platform Type",
+        value: "No-Code API Integration Platform",
+      },
+    },
+  },
+  {
+    title: "2021 - 2023",
+    content: {
+      year: "2021 - 2023",
+      position: "Technical Lead",
+      company: "Ymir - Dr.Dropin Healthcare",
+      achievements: [
+        "Built healthcare platform with Laravel & Vue.js on GCP",
+        "Developed patient & doctor dashboards",
+        "Reduced server costs by 75% migrating to GCP Cloud Run",
+        "Implemented HIPAA compliance & secure data management"
+      ],
+      technologies: "Vue.js, Laravel, PHP, GCP, AWS, MySQL, Docker, GitHub Actions",
+      additionalInfo: {
+        label: "Industry Focus",
+        value: "Healthcare Technology",
+      },
+    },
+  },
+  {
+    title: "2020 - 2021",
+    content: {
+      year: "2020 - 2021",
+      position: "Software Developer",
+      company: "ATI Motors",
+      achievements: [
+        "Developed Map Creator software for autonomous vehicles",
+        "Built mapping tools with advanced editing capabilities",
+        "Created intuitive route management interface",
+        "Improved navigation accuracy through enhanced mapping"
+      ],
+      technologies: "React, HTML Canvas, JavaScript, Node.js, Mapping APIs",
+      additionalInfo: {
+        label: "Project Focus",
+        value: "Map Creator Software for Autonomous Vehicles",
+      },
+    },
+  },
+  {
+    title: "2019 - 2020",
+    content: {
+      year: "2019 - 2020",
+      position: "Software Developer",
+      company: "MountBlue (Client: ATI Motors)",
+      achievements: [
+        "Developed web UI for autonomous vehicle management",
+        "Built fleet management & real-time tracking interfaces",
+        "Created responsive dashboards for vehicle operations",
+        "Implemented trip booking system with React & Express"
+      ],
+      technologies: "React, Express.js, Node.js, JavaScript, HTML, CSS",
+      additionalInfo: {
+        label: "Client Project",
+        value: "Autonomous Vehicle Web UI Development",
       },
     },
   },
@@ -62,9 +116,8 @@ export const experienceData: ExperienceData[] = [
       company: "Assam University",
       achievements: [
         "Computer Science and Engineering degree",
-        "Located in Silchar, Assam, India",
-        "Built foundation in software development and computer science principles",
-        "Participated in various technical projects and coding competitions"
+        "Built foundation in software development principles",
+        "Participated in technical projects & coding competitions"
       ],
       technologies: "C, C++, Java, Data Structures, Algorithms, Database Systems",
       additionalInfo: {

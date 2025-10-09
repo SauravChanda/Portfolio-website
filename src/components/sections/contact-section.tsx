@@ -3,33 +3,22 @@ import { motion } from "framer-motion";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-16 border-t border-black/5 dark:border-white/10">
-      <motion.div 
-        className="text-center"
+    <section id="contact" className="py-14 sm:py-20 border-t border-black/5 dark:border-white/10">
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
+        className="text-center"
       >
-        <motion.h2 
-          className="text-2xl sm:text-3xl font-bold"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-        >
-          Let&apos;s Work Together
-        </motion.h2>
-        <motion.p 
-          className="mt-4 text-base sm:text-lg text-black/80 dark:text-white/80 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          I&apos;m always interested in new opportunities and collaborations. 
-          Whether you have a project in mind or just want to chat about tech, feel free to reach out!
-        </motion.p>
+        <h2 className="text-2xl sm:text-3xl font-bold">
+          <span className="text-rose-600 dark:text-rose-400">💬 Ready to Start Something Amazing?</span>
+        </h2>
+        <p className="mt-4 text-base text-muted-foreground max-w-2xl mx-auto">
+          Got a project brewing in your mind? Let&apos;s turn those ideas into reality! 
+          I promise to respond faster than a JavaScript promise resolves ⚡ 
+          Drop me a line and let&apos;s chat about making your vision come to life! 🚀
+        </p>
         <motion.div 
           className="mt-8 flex flex-wrap justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}

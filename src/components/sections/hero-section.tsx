@@ -20,7 +20,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Hi, I&apos;m
+              👋 Welcome! Let me introduce myself...
             </motion.p>
             <motion.h1
               className="mt-2 text-4xl sm:text-5xl md:text-6xl font-bold"
@@ -34,7 +34,7 @@ export function HeroSection() {
             </motion.h1>
             <div className="mt-4 max-w-2xl">
               <TextGenerateEffect
-                words="Full-stack developer specializing in scalable web apps, cloud platforms, and DevOps."
+                words="I build full-stack apps, wrangle clouds, and ship features faster than you can say 'pnpm install' ☕"
                 className="text-base sm:text-lg text-foreground/80"
               />
             </div>

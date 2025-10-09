@@ -39,6 +39,15 @@ const testimonials = [
 export default function TestimonialsSection() {
   return (
     <section>
+      <div className="text-center mb-12">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+          <span className="text-amber-600 dark:text-amber-400">💬 What People Say About Working With Me</span>
+        </h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          Don&apos;t just take my word for it! Here&apos;s what my colleagues and clients have to say about our collaborations. 
+          Real feedback from real projects! 🌟
+        </p>
+      </div>
         {/* Animated Testimonials */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}

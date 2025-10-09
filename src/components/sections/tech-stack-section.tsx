@@ -56,8 +56,18 @@ const duplicatedTechStack = [...techStackData, ...techStackData]
 
 export default function TechStackSection() {
   return (
-    <section className="py-10 bg-background relative overflow-hidden">
+    <section id="stack" className="py-10 bg-background relative overflow-hidden">
       <div className="py-10 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4">
+              <span className="text-cyan-600 dark:text-cyan-400">🛠️ My Tech Arsenal</span>
+            </h2>
+          <p className="text-base text-foreground/70 max-w-2xl mx-auto px-4">
+            Wondering what tools I use to bring ideas to life? Here&apos;s my tech stack - 
+            each one carefully chosen for maximum impact! Hover over them to see the magic ✨
+          </p>
+        </div>
         <div className="relative">
           {/* Left gradient overlay - hidden on mobile */}
           <div className="absolute left-0 top-0 w-[20%] h-full bg-gradient-to-r from-background via-background/80 to-transparent z-20 pointer-events-none hidden sm:block"></div>

@@ -37,8 +37,8 @@ export function PortfolioNavbar() {
       <NavBody>
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold text-sm">
-            S
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold text-sm overflow-hidden">
+            <img src="/Logo.png" alt="Saurav Chanda" width={32} height={32} />
           </div>
           <span className="font-semibold text-neutral-900 dark:text-neutral-100">
             Saurav Chanda

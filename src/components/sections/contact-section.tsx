@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-14 sm:py-20 border-t border-black/5 dark:border-white/10">
+    <section id="contact" className="py-14 sm:py-20 border-black/5 dark:border-white/10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

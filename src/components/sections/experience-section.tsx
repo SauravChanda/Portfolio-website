@@ -20,7 +20,7 @@ export function ExperienceSection() {
 
   return (
     <section id="experience" className="relative">
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 mt-32">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">
           <span className="text-orange-600 dark:text-orange-400">🚀 My Journey So Far</span>
         </h2>

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { GlassCard } from "@/components/ui/glass-card";
 
 
 export function TechStackSection() {
@@ -105,7 +106,7 @@ export function TechStackSection() {
             return (
               <motion.div
                 key={tech.name}
-                className="group relative bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:border-primary/50"
+                className="group relative"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ 
@@ -115,20 +116,22 @@ export function TechStackSection() {
                 whileHover={{ y: -5 }}
                 viewport={{ once: true }}
               >
-                <div className="flex items-start gap-4 mb-3">
-                  <div className="bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors min-w-8 min-h-8 flex items-center justify-center">
-                    <span className="text-primary">{tech.icon}</span>
+                <GlassCard className="p-6 hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-start gap-4 mb-3">
+                    <div className="bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors min-w-8 min-h-8 flex items-center justify-center">
+                      <span className="text-primary">{tech.icon}</span>
+                    </div>
+                    <div className="flex w-full justify-between">
+                      <h3 className="font-semibold text-foreground">{tech.name}</h3>
+                      <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                        {tech.category}
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex w-full justify-between">
-                    <h3 className="font-semibold text-foreground">{tech.name}</h3>
-                    <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
-                      {tech.category}
-                    </span>
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {tech.description}
-                </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {tech.description}
+                  </p>
+                </GlassCard>
               </motion.div>
             );
           })}

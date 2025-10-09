@@ -18,7 +18,12 @@ export default function Home() {
       <section>
         <div className="mx-auto max-w-5xl px-6">
           <TestimonialsSection />
-          <TechStackSection />
+        </div>
+      </section>
+
+      <TechStackSection />
+      <section>
+        <div className="mx-auto max-w-5xl px-6">
           <ExperienceSection />
           <ProjectsSection />
           <ContactSection />

@@ -37,8 +37,14 @@ export function PortfolioNavbar() {
       <NavBody>
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold text-sm">
-            S
+          <div className="flex h-8 w-8 items-center justify-center rounded-full overflow-hidden">
+            <img
+              src="/Logo.png"
+              alt="Saurav Chanda Logo"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
           </div>
           <span className="font-semibold text-neutral-900 dark:text-neutral-100">
             Saurav Chanda
@@ -65,8 +71,14 @@ export function PortfolioNavbar() {
         <MobileNavHeader>
           {/* Mobile Logo */}
           <div className="flex items-center space-x-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold text-sm">
-              S
+            <div className="flex h-8 w-8 items-center justify-center rounded-full overflow-hidden">
+              <img
+                src="/Logo.png"
+                alt="Saurav Chanda Logo"
+                width={32}
+                height={32}
+                className="object-contain"
+              />
             </div>
             <span className="font-semibold text-neutral-900 dark:text-neutral-100">
               Saurav Chanda

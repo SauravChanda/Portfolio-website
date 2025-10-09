@@ -238,12 +238,13 @@ export const NavbarLogo = () => {
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="https://assets.aceternity.com/logo-dark.png"
-        alt="logo"
+        src="/Logo.png"
+        alt="Saurav Chanda Logo"
         width={30}
         height={30}
+        className="object-contain"
       />
-      <span className="font-medium text-black dark:text-white">Startup</span>
+      <span className="font-medium text-black dark:text-white">Saurav Chanda</span>
     </a>
   );
 };

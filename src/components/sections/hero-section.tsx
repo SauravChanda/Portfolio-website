@@ -15,12 +15,12 @@ export function HeroSection() {
           {/* Text Content */}
           <div className="order-2 lg:order-1">
             <motion.p
-              className="text-sm text-foreground/70 mb-1"
+              className="text-sm text-foreground/70"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              👋 Hey there! I&apos;m
+              Hi, I&apos;m
             </motion.p>
             <motion.h1
               className="mt-2 text-4xl sm:text-5xl md:text-6xl font-bold"
@@ -28,7 +28,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-red-500 to-pink-500">
                 Saurav Chanda
               </span>
             </motion.h1>
@@ -38,14 +38,6 @@ export function HeroSection() {
                 className="text-base sm:text-lg text-foreground/80"
               />
             </div>
-            <motion.p
-              className="text-sm text-foreground/70 mt-4 mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              Let&apos;s build something amazing together! 🚀
-            </motion.p>
             <motion.div
               className="mt-8 flex flex-wrap items-center gap-3"
               initial={{ opacity: 0, y: 20 }}

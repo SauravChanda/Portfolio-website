@@ -56,48 +56,7 @@ const duplicatedTechStack = [...techStackData, ...techStackData]
 
 export default function TechStackSection() {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
-      <div className="container mx-auto px-4 mb-16">
-        {/* Conversational Headers */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <motion.p 
-            className="text-lg text-muted-foreground mb-2"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            🛠️ Time to show off my toolkit...
-          </motion.p>
-          
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            My Tech Stack
-          </motion.h2>
-          
-          <motion.p 
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            These are my <em>stack</em>-holders in crime! From frontend magic to backend wizardry 🧙‍♂️⚡
-          </motion.p>
-        </motion.div>
-      </div>
-      
+    <section className="py-10 bg-background relative overflow-hidden">
       <div className="py-10 relative z-10">
         <div className="relative">
           {/* Left gradient overlay - hidden on mobile */}
@@ -106,7 +65,6 @@ export default function TechStackSection() {
           {/* Right gradient overlay - hidden on mobile */}
           <div className="absolute right-0 top-0 w-[20%] h-full bg-gradient-to-l from-background via-background/80 to-transparent z-20 pointer-events-none hidden sm:block"></div>
           
-          {/* First row - moving left */}
           <motion.div
             className="flex gap-6 py-4"
             animate={{
@@ -134,87 +92,23 @@ export default function TechStackSection() {
                   className="group flex-shrink-0"
                 >
                   <div className="relative w-32 h-32 xs:w-36 xs:h-24 sm:w-28 sm:h-28 md:w-38 md:h-28 rounded-lg overflow-hidden">
-                     {/* Subtle glass background */}
-                     <div className="absolute inset-0 w-full h-full rounded-lg backdrop-blur-sm bg-white/40 dark:bg-white/5 shadow-md shadow-black/5 dark:shadow-white/2 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-black/10 dark:group-hover:shadow-white/5"></div>
+                     {/* Clean glass background with crisp blur */}
+                     <div className="absolute inset-0 w-full h-full rounded-lg backdrop-blur-md bg-white/80 dark:bg-white/10 shadow-xl shadow-black/20 dark:shadow-white/5 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-black/30 dark:group-hover:shadow-white/10"></div>
 
-                     {/* Soft borders */}
-                     <div className="absolute inset-0 rounded-lg border border-black/5 dark:border-white/10 transition-all duration-300 group-hover:border-black/10 dark:group-hover:border-white/15"></div>
+                     {/* Crystal clear borders */}
+                     <div className="absolute inset-0 rounded-lg border border-black/10 dark:border-white/20 transition-all duration-300 group-hover:border-black/35 dark:group-hover:border-white/30"></div>
 
-                     {/* Gentle top highlight */}
-                     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-black/5 dark:via-white/20 to-transparent"></div>
+                     {/* Pristine top highlight */}
+                     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-black/10 dark:via-white/60 to-transparent"></div>
 
-                     {/* Soft left highlight */}
-                     <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-black/5 dark:via-white/20 to-transparent"></div>
+                     {/* Clean left highlight */}
+                     <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-black/10 dark:via-white/60 to-transparent"></div>
 
-                     {/* Very subtle inner reflection */}
-                     <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-black/5 dark:from-white/5 via-transparent to-transparent pointer-events-none transition-all duration-300 group-hover:from-black/8 dark:group-hover:from-white/8"></div>
+                     {/* Subtle inner reflection */}
+                     <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-black/10 dark:from-white/10 via-transparent to-transparent pointer-events-none transition-all duration-300 group-hover:from-black/15 dark:group-hover:from-white/15"></div>
 
-                     {/* Soft bottom shadow */}
-                     <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-black/5 dark:via-white/5 to-transparent"></div>
-
-                     {/* Content */}
-                     <div className="relative z-10 w-full h-full flex flex-col items-center justify-center p-6">
-                       <div className="mb-3 transition-transform duration-300 group-hover:scale-110">
-                         <IconComponent 
-                           className="w-8 h-8 transition-colors duration-300 drop-shadow-sm" 
-                           style={{ color: tech.color }}
-                         />
-                       </div>
-                       <span className="text-sm font-medium text-center text-foreground/90 group-hover:text-foreground transition-colors duration-300 drop-shadow-sm">
-                         {tech.skill}
-                       </span>
-                     </div>
-                   </div>
-                </motion.div>
-              )
-            })}
-          </motion.div>
-
-          {/* Second row - moving right */}
-          <motion.div
-            className="flex gap-6 py-4"
-            animate={{
-              x: [-100 * techStackData.length, 0],
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 20,
-                ease: "linear",
-              },
-            }}
-          >
-            {duplicatedTechStack.map((tech, index) => {
-              const IconComponent = tech.icon
-              return (
-                <motion.div
-                  key={`${tech.skill}-${index}-reverse`}
-                  whileHover={{ 
-                    scale: 1.05, 
-                    y: -5,
-                    transition: { type: 'spring', stiffness: 300, damping: 20 }
-                  }}
-                  className="group flex-shrink-0"
-                >
-                  <div className="relative w-32 h-32 xs:w-36 xs:h-24 sm:w-28 sm:h-28 md:w-38 md:h-28 rounded-lg overflow-hidden">
-                     {/* Subtle glass background */}
-                     <div className="absolute inset-0 w-full h-full rounded-lg backdrop-blur-sm bg-white/40 dark:bg-white/5 shadow-md shadow-black/5 dark:shadow-white/2 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-black/10 dark:group-hover:shadow-white/5"></div>
-
-                     {/* Soft borders */}
-                     <div className="absolute inset-0 rounded-lg border border-black/5 dark:border-white/10 transition-all duration-300 group-hover:border-black/10 dark:group-hover:border-white/15"></div>
-
-                     {/* Gentle top highlight */}
-                     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-black/5 dark:via-white/20 to-transparent"></div>
-
-                     {/* Soft left highlight */}
-                     <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-black/5 dark:via-white/20 to-transparent"></div>
-
-                     {/* Very subtle inner reflection */}
-                     <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-black/5 dark:from-white/5 via-transparent to-transparent pointer-events-none transition-all duration-300 group-hover:from-black/8 dark:group-hover:from-white/8"></div>
-
-                     {/* Soft bottom shadow */}
-                     <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-black/5 dark:via-white/5 to-transparent"></div>
+                     {/* Clean bottom shadow for depth */}
+                     <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-black/10 dark:via-white/10 to-transparent"></div>
 
                      {/* Content */}
                      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center p-6">

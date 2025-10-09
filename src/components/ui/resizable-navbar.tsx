@@ -238,13 +238,12 @@ export const NavbarLogo = () => {
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/Logo.png"
-        alt="Saurav Chanda Logo"
+        src="https://assets.aceternity.com/logo-dark.png"
+        alt="logo"
         width={30}
         height={30}
-        className="object-contain"
       />
-      <span className="font-medium text-black dark:text-white">Saurav Chanda</span>
+      <span className="font-medium text-black dark:text-white">Startup</span>
     </a>
   );
 };
@@ -279,7 +278,7 @@ export const NavbarButton = ({
     secondary: "bg-transparent shadow-none dark:text-white",
     dark: "bg-black text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05)]",
     gradient:
-      "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg hover:shadow-xl",
+      "bg-gradient-to-r from-red-500 to-orange-600 text-white shadow-lg hover:shadow-xl",
   };
 
   return (

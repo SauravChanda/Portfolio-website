@@ -13,7 +13,7 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Saurav Chanda - Built with ❤️ and lots of ☕</p>
           <div className="flex items-center gap-4">
             <a 
-              href="https://github.com/sauravchanda" 
+              href="https://github.com/SauravChanda" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
@@ -21,20 +21,12 @@ export function Footer() {
               GitHub 🚀
             </a>
             <a 
-              href="https://www.linkedin.com/in/sauravchanda" 
+              href="https://www.linkedin.com/in/saurav-chanda/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
             >
               LinkedIn 💼
-            </a>
-            <a 
-              href="https://twitter.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-foreground transition-colors"
-            >
-              X 🐦
             </a>
           </div>
         </div>

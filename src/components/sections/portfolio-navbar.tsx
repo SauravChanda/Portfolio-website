@@ -31,12 +31,16 @@ export function PortfolioNavbar() {
     setIsMobileMenuOpen(false);
   };
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <Navbar className="fixed inset-x-0 top-1 md:top-5 z-50">
       {/* Desktop Navigation */}
       <NavBody>
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 cursor-pointer" onClick={handleLogoClick}>
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold text-sm overflow-hidden">
             <img src="/Logo.png" alt="Saurav Chanda" width={32} height={32} />
           </div>
@@ -64,7 +68,7 @@ export function PortfolioNavbar() {
       <MobileNav>
         <MobileNavHeader>
           {/* Mobile Logo */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 cursor-pointer" onClick={handleLogoClick}>
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold text-sm">
               S
             </div>

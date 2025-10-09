@@ -70,7 +70,7 @@ export function HeroSection() {
               >
                 <Button variant="outline" asChild>
                   <a
-                    href="https://github.com/sauravchanda"
+                    href="https://github.com/SauravChanda"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -84,7 +84,7 @@ export function HeroSection() {
               >
                 <Button variant="outline" asChild>
                   <a
-                    href="https://www.linkedin.com/in/sauravchanda"
+                    href="https://www.linkedin.com/in/saurav-chanda/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

@@ -25,7 +25,7 @@ export default function Home() {
       <TechStackSection />
       <section>
         <div className="mx-auto max-w-5xl px-6">
-          {/* <ProjectsSection /> */}
+          <ProjectsSection />
           <ContactSection />
         </div>
       </section>

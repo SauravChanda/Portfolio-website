@@ -4,6 +4,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Button } from "@/components/ui/button";
 import { ScrollToSection } from "@/components/ui/scroll-to-section";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
+import { GlassCard } from "@/components/ui/glass-card";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 
@@ -110,36 +111,18 @@ export function HeroSection() {
                   <CardBody className="relative group/card w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                     <CardItem
                       translateZ="0"
-                      className="absolute w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
+                      className="absolute w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 p-4"
                     >
-                      <div className="absolute inset-0 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 dark:from-white dark:via-white dark:to-white rounded-lg blur-2xl opacity-30 dark:opacity-20"></div>
-                      <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/5 via-transparent to-black/5 pointer-events-none"></div>
-                      <div className="absolute inset-0 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-lg overflow-hidden shadow-2xl backdrop-blur-sm"></div>
+                      <GlassCard/>
                     </CardItem>
                     <CardItem
                       translateZ="50"
                       className="absolute w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-                      <div className="absolute inset-0 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-lg overflow-hidden grid grid-cols-2 grid-rows-2 gap-4">
-                        <div className="relative w-full h-full">
-                          <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden backdrop-blur-sm"></div>
-                          <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/5 via-transparent to-black/5 pointer-events-none"></div>
-                          <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden backdrop-blur-sm"></div>
-                        </div>
-                        <div className="relative w-full h-full">
-                          <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden backdrop-blur-sm"></div>
-                          <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/5 via-transparent to-black/5 pointer-events-none"></div>
-                          <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden backdrop-blur-sm"></div>
-                        </div>
-                        <div className="relative w-full h-full">
-                          <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden backdrop-blur-sm"></div>
-                          <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/5 via-transparent to-black/5 pointer-events-none"></div>
-                          <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden backdrop-blur-sm"></div>
-                        </div>
-                        <div className="relative w-full h-full">
-                          <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden backdrop-blur-sm"></div>
-                          <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/5 via-transparent to-black/5 pointer-events-none"></div>
-                          <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden backdrop-blur-sm"></div>
-                        </div>
+                      <div className="absolute inset-0 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-lg  grid grid-cols-2 grid-rows-2 gap-12">
+                        <GlassCard />
+                        <GlassCard />
+                        <GlassCard />
+                        <GlassCard />
                       </div>
                     </CardItem>
                     <CardItem

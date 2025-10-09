@@ -10,8 +10,7 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="py-20 sm:py-28 relative min-h-screen flex items-center justify-center">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
           <div className="order-2 lg:order-1">
@@ -148,28 +147,6 @@ export function HeroSection() {
             </div>
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.2 }}
-        >
-          <ScrollToSection
-            targetId="skills"
-            className="flex flex-col items-center text-foreground/60 hover:text-foreground transition-colors group"
-          >
-            <span className="text-sm mb-2">Scroll to explore</span>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <ChevronDown className="w-6 h-6 group-hover:scale-110 transition-transform" />
-            </motion.div>
-          </ScrollToSection>
-        </motion.div>
       </div>
-    </section>
-  );
-}
+    );
+  }

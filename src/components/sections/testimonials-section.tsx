@@ -38,7 +38,47 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section>
+    <section className="py-20">
+      <div className="container mx-auto px-4">
+        {/* Conversational Headers */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <motion.p 
+            className="text-lg text-muted-foreground mb-2"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            💬 Don't just take my word for it...
+          </motion.p>
+          
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 bg-clip-text text-transparent mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            What People Say
+          </motion.h2>
+          
+          <motion.p 
+            className="text-lg text-muted-foreground max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Here's some <em>testimonial</em> evidence that I don't just talk the talk - I walk the walk (and code the code)! 🚶‍♂️💻
+          </motion.p>
+        </motion.div>
+        
         {/* Animated Testimonials */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -48,6 +88,7 @@ export default function TestimonialsSection() {
         >
           <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
         </motion.div>
+      </div>
     </section>
   );
 }

@@ -15,12 +15,12 @@ export function HeroSection() {
           {/* Text Content */}
           <div className="order-2 lg:order-1">
             <motion.p
-              className="text-sm text-foreground/70"
+              className="text-sm text-foreground/70 mb-1"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Hi, I&apos;m
+              👋 Hey there! I'm
             </motion.p>
             <motion.h1
               className="mt-2 text-4xl sm:text-5xl md:text-6xl font-bold"
@@ -38,6 +38,14 @@ export function HeroSection() {
                 className="text-base sm:text-lg text-foreground/80"
               />
             </div>
+            <motion.p
+              className="text-sm text-foreground/70 mt-4 mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              Let's build something amazing together! 🚀
+            </motion.p>
             <motion.div
               className="mt-8 flex flex-wrap items-center gap-3"
               initial={{ opacity: 0, y: 20 }}

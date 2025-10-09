@@ -12,8 +12,10 @@ export function HeroSectionWrapper() {
           <BackgroundGradientAnimation />
         </div>
         {/* Gradient fade overlay at the bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
-        <ScrollIndicator targetId="skills" />
+        <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
+        <div className="hidden md:block">
+          <ScrollIndicator targetId="skills" />
+        </div>
       </div>
     </section>
   );

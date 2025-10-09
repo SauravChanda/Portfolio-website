@@ -5,6 +5,7 @@ import { AboutSection } from "@/components/sections/about-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { TechStackSection } from "@/components/sections/tech-stack-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
+import TestimonialsSection from "@/components/sections/testimonials-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { Footer } from "@/components/sections/footer";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
@@ -29,6 +30,7 @@ export default function Home() {
 
         <section>
           <div className="mx-auto max-w-5xl px-6">
+            <TestimonialsSection />
             <TechStackSection />
             <ExperienceSection />
             <ProjectsSection />

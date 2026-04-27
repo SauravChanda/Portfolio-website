@@ -136,10 +136,10 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="absolute inset-0 h-full w-full rounded-full bg-black"
             />
           )}
-          <span className="relative z-20">{item.name}</span>
+          <span className="relative z-20" style={{ WebkitTextStroke: "8px black", paintOrder: "stroke fill", strokeLinecap: "round", strokeLinejoin: "round" }}>{item.name}</span>
         </a>
       ))}
     </motion.div>

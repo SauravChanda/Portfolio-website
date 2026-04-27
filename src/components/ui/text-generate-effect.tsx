@@ -40,6 +40,10 @@ export const TextGenerateEffect = ({
               className="text-foreground opacity-0"
               style={{
                 filter: filter ? "blur(10px)" : "none",
+                WebkitTextStroke: "20px black",
+                paintOrder: "stroke fill",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
               }}
             >
               {word}{" "}

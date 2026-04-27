@@ -86,7 +86,7 @@ export const AnimatedTestimonials = ({
                     width={500}
                     height={500}
                     draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center border border-white/20 backdrop-blur-sm"
+                    className="h-full w-full rounded-none object-cover object-center border-4 border-white grayscale"
                   />
                 </motion.div>
               ))}
@@ -113,13 +113,13 @@ export const AnimatedTestimonials = ({
               ease: "easeInOut",
             }}
           >
-            <h3 className="text-2xl font-bold text-black dark:text-white">
+            <h3 className="text-2xl font-black text-white uppercase tracking-tighter">
               {testimonials[active].name}
             </h3>
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
+            <p className="text-sm text-white/60 font-mono uppercase tracking-tighter">
               {testimonials[active].designation}
             </p>
-            <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
+            <motion.p className="mt-8 text-lg text-white/80 font-mono">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -150,9 +150,9 @@ export const AnimatedTestimonials = ({
                   href={testimonials[active].linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                  className="text-sm text-white font-black uppercase tracking-tighter hover:text-white/60 border-b-2 border-white"
                 >
-                  View full testimonial on LinkedIn →
+                  VIEW ON LINKEDIN
                 </a>
               </div>
             )}
@@ -160,15 +160,15 @@ export const AnimatedTestimonials = ({
           <div className="flex gap-4 mt-4">
             <button
               onClick={handlePrev}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button flex h-10 w-10 items-center justify-center rounded-none bg-red-600 text-white border-4 border-red-600 hover:bg-red-700 transition-colors duration-0"
             >
-              <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
+              <IconArrowLeft className="h-5 w-5" />
             </button>
             <button
               onClick={handleNext}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button flex h-10 w-10 items-center justify-center rounded-none bg-red-600 text-white border-4 border-red-600 hover:bg-red-700 transition-colors duration-0"
             >
-              <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
+              <IconArrowRight className="h-5 w-5" />
             </button>
           </div>
         </div>

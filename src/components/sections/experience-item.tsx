@@ -18,34 +18,34 @@ export function ExperienceItem({
 }: ExperienceItemProps) {
   return (
     <div>
-      <p className="text-neutral-800 dark:text-neutral-200 text-base md:text-sm font-bold mb-8">
-        {position} at {company}
+      <p className="text-white text-base md:text-sm font-black mb-8 uppercase tracking-tighter">
+        {position} @ {company}
       </p>
       <div className="mb-8">
         {achievements.map((achievement, index) => (
           <div
             key={index}
-            className="flex gap-2 items-start text-neutral-700 dark:text-neutral-300 text-xs md:text-sm font-bold mb-2"
+            className="flex gap-2 items-start text-white/70 text-xs md:text-sm font-mono mb-2"
           >
-            <span className="text-neutral-500 dark:text-neutral-400 mt-1 text-xs">•</span>
+            <span className="text-white mt-1 text-xs">—</span>
             <span>{achievement}</span>
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-2 gap-4">
-        <div className="bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 rounded-lg p-4">
-          <p className="text-neutral-600 dark:text-neutral-400 text-xs font-medium">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="bg-black border-4 border-white rounded-none p-4">
+          <p className="text-white/60 text-xs font-black uppercase tracking-tighter mb-2">
             Technologies
           </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm">
+          <p className="text-white text-sm font-mono">
             {technologies}
           </p>
         </div>
-        <div className="bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 rounded-lg p-4">
-          <p className="text-neutral-600 dark:text-neutral-400 text-xs font-medium">
+        <div className="bg-black border-4 border-white rounded-none p-4">
+          <p className="text-white/60 text-xs font-black uppercase tracking-tighter mb-2">
             {additionalInfo.label}
           </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm">
+          <p className="text-white text-sm font-mono">
             {additionalInfo.value}
           </p>
         </div>

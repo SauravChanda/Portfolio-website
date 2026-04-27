@@ -10,7 +10,6 @@ import {
   MobileNavMenu,
   MobileNavToggle,
 } from "@/components/ui/resizable-navbar";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const navigationItems = [
   { name: "Testimonials", link: "#testimonials" },
@@ -45,11 +44,14 @@ export function PortfolioNavbar() {
       <NavBody>
         {/* Logo */}
         <div className="flex items-center space-x-2 cursor-pointer" onClick={handleLogoClick}>
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold text-sm overflow-hidden">
-            <img src="/Logo.png" alt="Saurav Chanda" width={32} height={32} />
+          <div className="flex h-10 w-10 items-center justify-center bg-white text-black font-black text-sm overflow-hidden border-4 border-white">
+            <img src="/Logo.png" alt="Saurav Chanda" width={40} height={40} />
           </div>
-          <span className="font-semibold text-neutral-900 dark:text-neutral-100">
-            Saurav Chanda
+          <span 
+            className="font-black text-white uppercase tracking-tighter"
+            style={{ WebkitTextStroke: "16px black", paintOrder: "stroke fill", strokeLinecap: "round", strokeLinejoin: "round" }}
+          >
+            SAURAV CHANDA
           </span>
         </div>
 
@@ -58,7 +60,6 @@ export function PortfolioNavbar() {
 
         {/* Right side actions */}
         <div className="flex items-center space-x-4">
-          <ThemeToggle />
           {/* <a
             href="#contact"
             className="hidden lg:inline-block px-4 py-2 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-medium rounded-md hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors cursor-pointer"
@@ -73,17 +74,16 @@ export function PortfolioNavbar() {
         <MobileNavHeader>
           {/* Mobile Logo */}
           <div className="flex items-center space-x-2 cursor-pointer" onClick={handleLogoClick}>
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold text-sm overflow-hidden">
-              <img src="/Logo.png" alt="Saurav Chanda" width={32} height={32} />
+            <div className="flex h-10 w-10 items-center justify-center bg-white text-black font-black text-sm overflow-hidden border-4 border-white">
+              <img src="/Logo.png" alt="Saurav Chanda" width={40} height={40} />
             </div>
-            <span className="font-semibold text-neutral-900 dark:text-neutral-100">
-              Saurav Chanda
+            <span className="font-black text-white uppercase tracking-tighter">
+              SAURAV CHANDA
             </span>
           </div>
 
-          {/* Mobile menu toggle and theme toggle */}
+          {/* Mobile menu toggle */}
           <div className="flex items-center space-x-2">
-            <ThemeToggle />
             <MobileNavToggle
               isOpen={isMobileMenuOpen}
               onClick={handleMobileMenuToggle}
@@ -101,18 +101,18 @@ export function PortfolioNavbar() {
               key={`mobile-link-${idx}`}
               href={item.link}
               onClick={handleMobileItemClick}
-              className="block w-full px-4 py-2 text-left text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100 transition-colors"
+              className="block w-full px-4 py-3 text-left text-white hover:bg-white hover:text-black uppercase font-black transition-colors border-2 border-white"
             >
               {item.name}
             </a>
           ))}
-          <div className="mt-4 pt-4 border-neutral-200 dark:border-neutral-700">
+          <div className="mt-4 pt-4 border-2 border-white">
             <a
               href="#contact"
-              className="w-full block px-4 py-2 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-medium rounded-md hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors text-center"
+              className="w-full block px-4 py-3 bg-white text-black text-sm font-black uppercase text-center border-2 border-white"
               onClick={handleMobileItemClick}
             >
-              Get in Touch
+              GET IN TOUCH
             </a>
           </div>
         </MobileNavMenu>

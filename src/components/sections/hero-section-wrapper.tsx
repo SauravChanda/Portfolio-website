@@ -1,21 +1,23 @@
 "use client";
+import Image from "next/image";
 import { HeroSection } from "./hero-section";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import { ScrollIndicator } from "@/components/ui/scroll-indicator";
+import { HalftoneOverlay } from "@/components/ui/halftone-overlay";
 
 export function HeroSectionWrapper() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative">
-      <div className="mx-auto max-w-5xl px-6 w-full">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <HalftoneOverlay />
+      <div className="absolute right-0 top-0 h-full w-[50%] z-20">
+        <Image
+          src="/Anime Version Creation Apr 28 2026 (1) Background Removed.png"
+          alt="Saurav Chanda"
+          fill
+          className="object-contain object-bottom"
+          priority
+        />
+      </div>
+      <div className="relative z-10 w-full pr-[40%]">
         <HeroSection />
-        <div className="absolute inset-0 z-0">
-          <BackgroundGradientAnimation />
-        </div>
-        {/* Gradient fade overlay at the bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
-        <div className="hidden md:block">
-          <ScrollIndicator targetId="skills" />
-        </div>
       </div>
     </section>
   );

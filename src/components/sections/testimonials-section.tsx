@@ -13,7 +13,7 @@ const testimonials = [
   },
   {
     quote: "Saurav's dedication and natural curiosity drive successful projects. His proactive problem-solving skills and leadership foster collaborative environments. With his positive attitude and drive for growth, he would excel in any tech leadership role.",
-    name: "Renuka", 
+    name: "Renuka",
     designation: "Founder at Soululu",
     src: "/Renuka.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/saurav-chanda/"
@@ -22,14 +22,14 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section id="testimonials">
-      <div className="text-center mb-12">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-          <span className="text-amber-600 dark:text-amber-400">💬 What People Say About Working With Me</span>
+    <section id="testimonials" className="border-t-4 border-white relative py-20">
+      <div className="px-6 text-center mb-12">
+        <h2 className="text-2xl sm:text-3xl font-black mb-4 uppercase tracking-tighter">
+          // TESTIMONIALS
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          Don&apos;t just take my word for it! Here&apos;s what my colleagues and clients have to say about our collaborations. 
-          Real feedback from real projects! 🌟
+        <p className="text-muted-foreground max-w-2xl mx-auto font-mono">
+          Don&apos;t just take my word for it! Here&apos;s what my colleagues and clients have to say about our collaborations.
+          Real feedback from real projects!
         </p>
       </div>
         {/* Animated Testimonials */}

@@ -14,22 +14,11 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground relative scroll-smooth">
       <PortfolioNavbar />
       <HeroSectionWrapper />
-
-      <section>
-        <div className="mx-auto max-w-5xl px-6">
-          <TestimonialsSection />
-          <ExperienceSection />
-        </div>
-      </section>
-
+      <TestimonialsSection />
+      <ExperienceSection />
       <TechStackSection />
-      <section>
-        <div className="mx-auto max-w-5xl px-6">
-          <ProjectsSection />
-          <ContactSection />
-        </div>
-      </section>
-
+      <ProjectsSection />
+      <ContactSection />
       <Footer />
     </div>
   );

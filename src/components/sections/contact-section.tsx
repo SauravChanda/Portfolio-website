@@ -5,7 +5,7 @@ import { HalftoneOverlay } from "@/components/ui/halftone-overlay";
 export function ContactSection() {
   return (
     <section id="contact" className="py-14 sm:py-20 border-t-4 border-white relative overflow-hidden">
-      <HalftoneOverlay sectionId="contact" />
+      <HalftoneOverlay sectionId="contact" maxDist={200} />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -3,9 +3,10 @@ import { useEffect, useRef } from "react";
 
 interface HalftoneOverlayProps {
   sectionId?: string;
+  maxDist?: number;
 }
 
-export function HalftoneOverlay({ sectionId = "home" }: HalftoneOverlayProps) {
+export function HalftoneOverlay({ sectionId = "home", maxDist = 450 }: HalftoneOverlayProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef({ x: -1000, y: -1000 });
   const dotsRef = useRef<{ x: number; y: number; baseSize: number }[]>([]);
@@ -44,11 +45,12 @@ export function HalftoneOverlay({ sectionId = "home" }: HalftoneOverlayProps) {
       if (!sectionRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
 
-      const maxDist = 450;
+      const maxDistVal = maxDist;
       const maxSize = 12;
       const minSize = 1;
+      const chromaOffsetX = 3;
+      const chromaOffsetY = 2;
 
       const offsetX = rect.left;
       const offsetY = rect.top;
@@ -58,9 +60,27 @@ export function HalftoneOverlay({ sectionId = "home" }: HalftoneOverlayProps) {
         const dy = mouseRef.current.y - (dot.y + offsetY);
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < maxDist) {
+        if (dist < maxDistVal) {
           const intensity = 1 - dist / maxDist;
           const size = minSize + (maxSize - minSize) * Math.pow(intensity, 2);
+
+          ctx.fillStyle = "rgba(220, 38, 38, 0.85)";
+          ctx.beginPath();
+          ctx.arc(dot.x + chromaOffsetX, dot.y - chromaOffsetY, size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+
+      dotsRef.current.forEach((dot) => {
+        const dx = mouseRef.current.x - (dot.x + offsetX);
+        const dy = mouseRef.current.y - (dot.y + offsetY);
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < maxDistVal) {
+          const intensity = 1 - dist / maxDist;
+          const size = minSize + (maxSize - minSize) * Math.pow(intensity, 2);
+
+          ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
           ctx.beginPath();
           ctx.arc(dot.x, dot.y, size, 0, Math.PI * 2);
           ctx.fill();

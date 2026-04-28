@@ -6,7 +6,7 @@ import {
   SiVuedotjs,
   SiJavascript,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiNodedotjs,
   SiExpress,
   SiDjango,
@@ -15,7 +15,6 @@ import {
   SiLaravel,
   SiMysql,
   SiPostgresql,
-  SiAmazon,
   SiGooglecloud,
   SiDocker,
   SiGithubactions,
@@ -28,7 +27,7 @@ const techStackData = [
   { skill: 'Vue.js', icon: SiVuedotjs, color: '#ffffff' },
   { skill: 'JavaScript', icon: SiJavascript, color: '#ffffff' },
   { skill: 'HTML', icon: SiHtml5, color: '#ffffff' },
-  { skill: 'CSS', icon: SiCss3, color: '#ffffff' },
+  { skill: 'CSS', icon: SiCss, color: '#ffffff' },
 
   // Backend
   { skill: 'Node.js', icon: SiNodedotjs, color: '#ffffff' },
@@ -45,7 +44,6 @@ const techStackData = [
   { skill: 'PostgreSQL', icon: SiPostgresql, color: '#ffffff' },
 
   // Cloud & DevOps
-  { skill: 'AWS', icon: SiAmazon, color: '#ffffff' },
   { skill: 'GCP', icon: SiGooglecloud, color: '#ffffff' },
   { skill: 'Docker', icon: SiDocker, color: '#ffffff' },
   { skill: 'GitHub Actions', icon: SiGithubactions, color: '#ffffff' },

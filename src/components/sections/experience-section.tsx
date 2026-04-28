@@ -22,7 +22,7 @@ export function ExperienceSection() {
     <section id="experience" className="relative border-t-4 border-white">
       <div className="px-6 text-center mb-12 mt-32">
         <h2 className="text-2xl sm:text-3xl font-black mb-4 uppercase tracking-tighter">
-          // EXPERIENCE
+          {'//'} EXPERIENCE
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto font-mono">
           Want to know where I&apos;ve been coding magic? Here&apos;s my professional adventure timeline -

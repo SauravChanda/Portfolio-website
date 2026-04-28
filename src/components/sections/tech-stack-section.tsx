@@ -91,7 +91,7 @@ export default function TechStackSection() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-black text-center mb-4 uppercase tracking-tighter">
-            // STACK
+            {'//'} STACK
           </h2>
           <p className="text-base text-foreground/70 max-w-2xl mx-auto px-4 font-mono">
             Wondering what tools I use to bring ideas to life? Here&apos;s my tech stack -

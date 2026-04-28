@@ -15,7 +15,7 @@ export function HeroSection() {
           transition={{ duration: 0.5 }}
           style={{ WebkitTextStroke: "12px black", paintOrder: "stroke fill", strokeLinecap: "round", strokeLinejoin: "round" }}
         >
-          // welcome
+          {'//'} welcome
         </motion.p>
         <motion.h1
           className="mt-6 text-7xl sm:text-8xl md:text-9xl font-black tracking-tighter"

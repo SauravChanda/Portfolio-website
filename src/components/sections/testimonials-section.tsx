@@ -25,7 +25,7 @@ export default function TestimonialsSection() {
     <section id="testimonials" className="border-t-4 border-white relative py-20">
       <div className="px-6 text-center mb-12">
         <h2 className="text-2xl sm:text-3xl font-black mb-4 uppercase tracking-tighter">
-          // TESTIMONIALS
+          {'//'} TESTIMONIALS
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto font-mono">
           Don&apos;t just take my word for it! Here&apos;s what my colleagues and clients have to say about our collaborations.

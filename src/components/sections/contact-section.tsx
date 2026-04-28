@@ -17,7 +17,7 @@ export function ContactSection() {
           className="text-2xl sm:text-3xl font-black uppercase tracking-tighter"
           style={{ WebkitTextStroke: "12px black", paintOrder: "stroke fill", strokeLinecap: "round", strokeLinejoin: "round" }}
         >
-          // CONTACT
+          {'//'} CONTACT
         </h2>
         <p 
           className="mt-4 text-base text-muted-foreground max-w-2xl mx-auto font-mono"

@@ -64,7 +64,7 @@ export function ProjectsSection() {
         className="px-6 text-center mb-12"
       >
         <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tighter">
-          // PROJECTS
+          {'//'} PROJECTS
         </h2>
         <p className="mt-4 text-muted-foreground max-w-2xl mx-auto font-mono">
           Ready to see what I&apos;ve been building? Each project tells a story of problem-solving and innovation.

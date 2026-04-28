@@ -9,8 +9,8 @@ export function HalftoneOverlay({ sectionId = "home" }: HalftoneOverlayProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef({ x: -1000, y: -1000 });
   const dotsRef = useRef<{ x: number; y: number; baseSize: number }[]>([]);
-  const animationRef = useRef<number>();
-  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const animationRef = useRef<number | undefined>(undefined);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     sectionRef.current = document.getElementById(sectionId);

@@ -3,7 +3,7 @@ export function Footer() {
     <footer className="border-t-4 border-white relative">
       <div className="w-full px-6 py-8 text-sm">
         <div className="text-center mb-6">
-          <p className="text-base font-black uppercase mb-2 tracking-tighter">// THANKS FOR SCROLLING</p>
+          <p className="text-base font-black uppercase mb-2 tracking-tighter">{'//'} THANKS FOR SCROLLING</p>
           <p className="text-sm font-mono text-white/60">
             You&apos;ve made it to the end - that&apos;s dedication! Ready to start a conversation?
             I&apos;m just a click away!

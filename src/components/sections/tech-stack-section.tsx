@@ -6,7 +6,7 @@ import {
   SiVuedotjs,
   SiJavascript,
   SiHtml5,
-  SiCss,
+SiCss3,
   SiNodedotjs,
   SiExpress,
   SiDjango,
@@ -27,7 +27,7 @@ const techStackData = [
   { skill: 'Vue.js', icon: SiVuedotjs, color: '#ffffff' },
   { skill: 'JavaScript', icon: SiJavascript, color: '#ffffff' },
   { skill: 'HTML', icon: SiHtml5, color: '#ffffff' },
-  { skill: 'CSS', icon: SiCss, color: '#ffffff' },
+  { skill: 'CSS', icon: SiCss3, color: '#ffffff' },
 
   // Backend
   { skill: 'Node.js', icon: SiNodedotjs, color: '#ffffff' },
